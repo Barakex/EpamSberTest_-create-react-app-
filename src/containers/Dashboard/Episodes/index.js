@@ -52,8 +52,8 @@ class Episodes extends Component {
                                     </div>
                                 ))
                             }
-                         </React.Fragment>
-                         : null
+                        </React.Fragment>
+                        : null
                     }
                 </div>
             </div>
@@ -67,13 +67,3 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators({ requestApiEpisodes }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Episodes);
-
-// {
-//     data.episodes.map((item) => (
-//         <div className="episodes-tData">
-//             <div>item.name</div>
-//             <div></div>
-//             <div></div>
-//         </div>
-//     ))
-// }
