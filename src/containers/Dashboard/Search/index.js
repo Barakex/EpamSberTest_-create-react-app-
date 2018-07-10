@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 
 import Modal from "../../../components/Modal";
-import { requestApiData, toggleModalWindow } from '../../../actions';
+import { requestApiData, toggleModalWindow } from '../../../redux/actions';
 
 class Search extends Component {
     constructor() {
@@ -35,7 +35,7 @@ class Search extends Component {
         const { search } = this.props;
         if (search.modalWindow) {
             return (
-                <Modal hendleClick={() => this.closeWindow()} text="Результатов не найдено"/>
+                <Modal handleClick={() => this.closeWindow()} text="Результатов не найдено"/>
             );
         };
 
@@ -71,8 +71,6 @@ class Search extends Component {
                             </div>
                         : <h3>Enter the name of the series</h3>
                     }
-                <div>
-                </div>
             </div>
         );
     }

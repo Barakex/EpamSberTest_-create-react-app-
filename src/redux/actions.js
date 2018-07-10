@@ -1,10 +1,10 @@
-export const REQUEST_API_DATA = "REQUEST_API_DATA";
-export const RECEIVE_API_DATA = "RECEIVE_API_DATA";
-
-export const TOGGLE_MODAL = "OPEN_MODAL";
-
-export const REQUEST_API_EPISODES = "REQUEST_API_EPISODES";
-export const RECEIVE_API_EPISODES = "RECEIVE_API_EPISODES";
+import {
+    REQUEST_API_DATA,
+    RECEIVE_API_DATA,
+    TOGGLE_MODAL,
+    REQUEST_API_EPISODES,
+    RECEIVE_API_EPISODES
+ } from './constants';
 
 export function requestApiData(data) {
     return {

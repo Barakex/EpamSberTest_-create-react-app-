@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import { requestApiEpisodes } from '../../../actions';
+import { requestApiEpisodes } from '../../../redux/actions';
 
 const tableHeaderData = [
     {

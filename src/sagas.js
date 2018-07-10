@@ -1,12 +1,15 @@
 import { call, put, takeLatest } from "redux-saga/effects";
 
+import  {
+  REQUEST_API_DATA,
+  REQUEST_API_EPISODES,
+} from "./redux/constants"
+
 import {
-    REQUEST_API_DATA,
-    REQUEST_API_EPISODES,
     receiveApiData,
     receiveApiEpisodes,
     toggleModalWindow
-  } from "./actions";
+  } from "./redux/actions";
 
 import { fetchData, fetchEpisodes } from "./api";
 
@@ -28,12 +31,12 @@ function* getApiEpisodes(action) {
     const data = yield call(() => fetchEpisodes(action.data));
     const htmlTagRe = /<\/?[\w\s="/.':;#-\/]+>/gi;
     if (data.length !== 0) {
-      data.map((item) => {
+      data.forEach(item => {
         if (item.length !== 0 && item.summary) {
           const plainTExt = item.summary.replace(htmlTagRe, '');
-          return item.summary = plainTExt;
+          item.summary = plainTExt;
         }
-      })
+      });
       yield put(receiveApiEpisodes(data));
     } 
   } catch (e) {

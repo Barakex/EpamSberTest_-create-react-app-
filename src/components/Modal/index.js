@@ -6,7 +6,7 @@ function Modal (props) {
             <div className="modal-content">
                 <h1>Modal window</h1>
                 <span>{props.text}</span>
-                <div onClick={() => props.hendleClick()} className="circleClose">Close</div>
+                <div onClick={() => props.handleClick()} className="circleClose">Close</div>
             </div>
         </div>
     );

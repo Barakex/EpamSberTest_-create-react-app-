@@ -1,10 +1,10 @@
-import { RECEIVE_API_EPISODES } from "../actions";
+import { RECEIVE_API_EPISODES } from "../constants";
 
-const inicialState = {
+const initialState = {
     episodes: null,
 };
 
-export default (state = inicialState, { type, data }) => {
+export default (state = initialState, { type, data }) => {
   switch (type) {
     case RECEIVE_API_EPISODES:
       return {...state, episodes: data};
