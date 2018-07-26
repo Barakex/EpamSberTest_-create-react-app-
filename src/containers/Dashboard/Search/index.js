@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Modal from "../../../components/Modal";
 import { requestApiData, toggleModalWindow } from '../../../redux/actions';
 
-class Search extends Component {
+export class Search extends Component {
     constructor() {
         super();
         this.state = {
@@ -44,7 +44,7 @@ class Search extends Component {
                 <h1>Search</h1>
                 <div>
                     <input type='text' onChange={(e) => this.getSearchValue(e)} />
-                    <button onClick={() => this.handleClick()}>Search</button>
+                    <button className="t_searchButton" onClick={() => this.handleClick()}>Search</button>
                 </div>
                     {
                         search.data.length !== 0 ? 

@@ -1,6 +1,6 @@
 import { RECEIVE_API_DATA, TOGGLE_MODAL } from "../constants";
 
-const initialState = {
+export const initialState = {
     dataTest: null,
     modalWindow: false,
     data: [],
